@@ -1,15 +1,59 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <h1>Verify your phone number</h1>
-      <span>WhatsApp will need to verify your account</span>
-      <option>
-        <select>
-          Country
+      <div class="header">
+        <span> Enter your phone number</span>
+        <button><mat-icon>more_vert</mat-icon></button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="warn">
+        <span
+          >WhatsApp will need to verify your phone number.
+          <a href="#"> What’s my number?</a></span
+        >
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="country">
+        <select (change)="onCountrySelected($event)">
+          <option *ngFor="let country of countryOptions">
+            {{ country.name }}
+          </option>
         </select>
-      </option>
-      <span>+91</span
-      ><input type="text" placeholder="phone number" value="1234567890" />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="phone">
+        <input class="phonecode" type="text" value="+91" readonly />
+        <input
+          type="text"
+          placeholder="Enter your phone number"
+          value="1234567890"
+          pattern="\d*"
+          class="phonenumber"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="message">
+        <p>Carrier charges may apply</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="process">
+        <button mat-raised-button>Next</button>
+      </div>
     </div>
   </div>
 </div>

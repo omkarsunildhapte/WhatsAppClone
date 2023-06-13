@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  text-align: center;
+}
+.col {
+  width: 100%;
+}
+.header {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  background: #008069;
+  padding: 10px;
+}
+.mat-tab-label {
+  background-color: #008069;
+  color: #fff;
+}
+.header span {
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  font-family: "Roboto", Arial, sans-serif;
+}
+.navgation {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.navgation mat-icon {
+  font-size: 20px;
+  color: #fff;
+}
+.custom-tab-group ::ng-deep .mat-tab-label {
+  background-color: #008069;
+  color: #fff;
+}
+.nav {
+  background-color: #008069;
+  color: #fff;
+}

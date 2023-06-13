@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  text-align: center;
+  padding: 15px 10px;
+}
+.col {
+  width: 100%;
+}
+.header {
+  display: flex;
+  text-align: center;
+  align-items: left;
+  justify-content: left;
+}
+.header button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.header button mat-icon {
+  font-size: 24px;
+}
+.header span {
+  font-size: 24px;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 500;
+  margin: 10px;
+}
+.message,
+.otp,
+.timer,
+.footer {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.message {
+  margin: 100px 0px 15px 0px;
+}
+.message span {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 15px;
+}
+.otp input {
+  height: 50px;
+  width: 50px;
+  border-radius: 20px;
+  margin: 12px;
+}
+.timer span {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 17px;
+}
+.footer {
+  margin: 70px 0px;
+}
+.footer button {
+  width: 300px;
+  border-radius: 20px;
+  background: #000000;
+  color: #fff;
+}
+.footer button:hover {
+  background: rgba(54, 54, 54, 0.44);
+}

@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="header">
+        <div>
+          <span>WhatsApp</span>
+        </div>
+        <div class="navgation">
+          <input matInput placeholder="Search" style="display: none" />
+          <button mat-button matSuffix>
+            <mat-icon>search</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>more_vert</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="navgation">
+        <mat-tab-group class="custom-tab-group">
+          <mat-tab class="label">
+            <ng-template mat-tab-label>
+              <mat-icon class="">camera_alt</mat-icon>
+            </ng-template>
+            Content 1
+          </mat-tab>
+          <div class="nav">
+            <mat-tab class="" label="Chats"> Chats </mat-tab>
+            <mat-tab label="Status"> Status </mat-tab>
+            <mat-tab label="Calls"> Calls </mat-tab>
+          </div>
+        </mat-tab-group>
+      </div>
+    </div>
+  </div>
+</div>
