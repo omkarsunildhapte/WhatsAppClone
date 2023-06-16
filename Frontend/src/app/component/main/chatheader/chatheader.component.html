@@ -7,10 +7,13 @@
         </div>
         <div class="navgation">
           <input matInput placeholder="Search" style="display: none" />
-          <button mat-button matSuffix>
+          <button>
+            <mat-icon>camera_alt</mat-icon>
+          </button>
+          <button>
             <mat-icon>search</mat-icon>
           </button>
-          <button mat-icon-button>
+          <button>
             <mat-icon>more_vert</mat-icon>
           </button>
         </div>
@@ -19,16 +22,16 @@
   </div>
   <div class="row">
     <div class="col">
-      <div class="navgation">
-        <mat-tab-group class="custom-tab-group">
-          <mat-tab class="label">
+      <div class="nav">
+        <mat-tab-group class="custom-primary">
+          <mat-tab>
             <ng-template mat-tab-label>
-              <mat-icon class="">camera_alt</mat-icon>
+              <mat-icon>group</mat-icon>
             </ng-template>
-            Content 1
+            <div>Content 1</div>
           </mat-tab>
-          <div class="nav">
-            <mat-tab class="" label="Chats"> Chats </mat-tab>
+          <div class="navigation">
+            <mat-tab class="custom-tab" label="Chats"> Chats </mat-tab>
             <mat-tab label="Status"> Status </mat-tab>
             <mat-tab label="Calls"> Calls </mat-tab>
           </div>
