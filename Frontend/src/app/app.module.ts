@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './component/auth/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OtpComponent } from './component/auth/otp/otp.component';
 import { ChatheaderComponent } from './component/main/chatheader/chatheader.component';
 import { MatInputModule } from '@angular/material/input';
@@ -15,6 +15,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { ChatsComponent } from './component/main/chats/chats.component';
 import { WelcomeComponent } from './component/slider/welcome/welcome.component';
 import { TeamsServiceComponent } from './component/slider/teams-service/teams-service.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,9 +25,13 @@ import { TeamsServiceComponent } from './component/slider/teams-service/teams-se
     ChatheaderComponent,
     ChatsComponent,
     WelcomeComponent,
-    TeamsServiceComponent
+    TeamsServiceComponent,
   ],
   imports: [
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+    MatMenuModule,
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,

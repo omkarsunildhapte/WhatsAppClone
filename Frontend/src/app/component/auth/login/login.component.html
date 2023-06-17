@@ -3,7 +3,12 @@
     <div class="col">
       <div class="header">
         <span> Enter your phone number</span>
-        <button><mat-icon>more_vert</mat-icon></button>
+        <button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Help</button>
+        </mat-menu>
       </div>
     </div>
   </div>
@@ -17,43 +22,74 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col">
-      <div class="country">
-        <select (change)="onCountrySelected($event)">
-          <option *ngFor="let country of countryOptions">
-            {{ country.name }}
-          </option>
-        </select>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col">
+        <div class="country">
+          <select
+            (change)="onCountrySelected($event)"
+            formControlName="country"
+          >
+            <option value="select">--Select--</option>
+            <option *ngFor="let country of countries">
+              {{ country.name }}
+            </option>
+          </select>
+        </div>
+        <div
+          *ngIf="
+            form.get('country')?.invalid &&
+            form.get('country')?.value == 'select' &&
+            (form.get('country')?.dirty || form.get('country')?.touched)
+          "
+          class="error-message"
+        >
+          Country is required
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <div class="phone">
-        <input class="phonecode" type="text" value="+91" readonly />
-        <input
-          type="text"
-          placeholder="Enter your phone number"
-          value="1234567890"
-          pattern="\d*"
-          class="phonenumber"
-        />
+    <div class="row">
+      <div class="col">
+        <div class="phone">
+          <input
+            class="phonecode"
+            type="text"
+            [value]="selectedPhoneCode"
+            readonly
+          />
+          <input
+            type="text"
+            placeholder="Enter your phone number"
+            class="phonenumber"
+            formControlName="phoneNumber"
+            maxlength="15"
+          />
+          <div
+            *ngIf="
+              form.get('phoneNumber')?.invalid &&
+              form.get('phoneNumber')?.dirty &&
+              form.get('phoneNumber')?.touched
+            "
+            class="error-message"
+          >
+            Phone number is required and must contain only digits
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <div class="message">
-        <p>Carrier charges may apply</p>
+    <div class="row">
+      <div class="col">
+        <div class="message">
+          <p>Carrier charges may apply</p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <div class="process">
-        <button mat-raised-button>Next</button>
+    <div class="row">
+      <div class="col">
+        <div class="process">
+          <button mat-raised-button type="submit">Next</button>
+        </div>
       </div>
     </div>
-  </div>
+  </form>
 </div>
