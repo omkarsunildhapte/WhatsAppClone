@@ -17,6 +17,7 @@ import { WelcomeComponent } from './component/slider/welcome/welcome.component';
 import { TeamsServiceComponent } from './component/slider/teams-service/teams-service.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { HttpClientModule } from '@angular/common/http';
+import { NumericOnlyDirective } from './directive/numeric-only.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     ChatsComponent,
     WelcomeComponent,
     TeamsServiceComponent,
+    NumericOnlyDirective,
   ],
   imports: [
     ReactiveFormsModule,

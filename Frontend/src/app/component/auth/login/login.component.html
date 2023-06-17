@@ -59,21 +59,26 @@
           />
           <input
             type="text"
-            placeholder="Enter your phone number"
+            placeholder="Ex: 1234567890"
             class="phonenumber"
             formControlName="phoneNumber"
-            maxlength="15"
+            maxlength="17"
+            appNumericOnly
           />
-          <div
-            *ngIf="
-              form.get('phoneNumber')?.invalid &&
-              form.get('phoneNumber')?.dirty &&
-              form.get('phoneNumber')?.touched
-            "
-            class="error-message"
-          >
-            Phone number is required and must contain only digits
-          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div
+          *ngIf="
+            form.get('phoneNumber')?.invalid &&
+            form.get('phoneNumber')?.dirty &&
+            form.get('phoneNumber')?.touched
+          "
+          class="error-message"
+        >
+          Phone number is required and must contain only digits
         </div>
       </div>
     </div>

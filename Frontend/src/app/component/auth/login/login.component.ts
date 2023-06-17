@@ -20,7 +20,7 @@ export class LoginComponent {
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       country: ['', Validators.required],
-      phoneNumber: ['', [Validators.required, Validators.pattern('\\d*')]]
+      phoneNumber: ['', [Validators.required]]
     });
 
     this.countryService.getCountries().subscribe(
