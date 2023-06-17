@@ -18,6 +18,7 @@ import { TeamsServiceComponent } from './component/slider/teams-service/teams-se
 import { MatMenuModule } from '@angular/material/menu';
 import { HttpClientModule } from '@angular/common/http';
 import { NumericOnlyDirective } from './directive/numeric-only.directive';
+import { AddUnderscoreDirective } from './directive/add-underscore.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import { NumericOnlyDirective } from './directive/numeric-only.directive';
     WelcomeComponent,
     TeamsServiceComponent,
     NumericOnlyDirective,
+    AddUnderscoreDirective,
   ],
   imports: [
     ReactiveFormsModule,

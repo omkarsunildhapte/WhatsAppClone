@@ -4,30 +4,38 @@
       <div class="header">
         <button><mat-icon>keyboard_backspace</mat-icon></button>
         <span>Enter OTP Code</span>
+        <button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Help</button>
+        </mat-menu>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col">
       <div class="message">
-        <span>Code has been send to +91 11******44</span>
+        <span
+          >Waiting to automatically detect an SMS sent to +91 11******44. Wrong
+          number ?
+        </span>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col">
       <div class="otp">
-        <input type="number" maxlength="1" />
-        <input type="number" maxlength="1" />
-        <input type="number" maxlength="1" />
-        <input type="number" maxlength="1" />
+        <input type="text" maxlength="6" />
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col">
       <div class="timer">
-        <span>Resend Code in 56 s</span>
+        <span
+          >Resend Code in <i>{{ time }} </i>s</span
+        >
       </div>
     </div>
   </div>
