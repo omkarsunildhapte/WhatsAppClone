@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { countries } from 'countries-list';
 import { CountryService } from 'src/app/service/country.service';
-
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { PhoneErrorComponent } from 'src/app/component/dialog/phone-error/phone-error.component';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,8 +15,8 @@ export class LoginComponent {
   selectedCountry!: string;
   selectedPhoneCode: string = '+1';
   form!: FormGroup;
-
-  constructor(private countryService: CountryService, private formBuilder: FormBuilder) {
+  dialogRef !: MatDialogRef<PhoneErrorComponent>;
+  constructor(private countryService: CountryService, private formBuilder: FormBuilder, private router: Router, private dialog: MatDialog) {
   }
 
   ngOnInit(): void {
@@ -48,8 +50,19 @@ export class LoginComponent {
 
 
   onSubmit() {
+    if (this.form.valid && this.selectedCountry != " ") {
+      this.router.navigate(['otp']);
+    }
+    else {
+      this.dialogRef = this.dialog.open(PhoneErrorComponent, {
+        width: '250px',
+        data: { message: 'This is a dynamic message!' }
+      });
 
+      this.dialogRef.afterClosed().subscribe(result => {
+        console.log('Dialog closed:', result);
+      });
+    }
   }
 }
-
 

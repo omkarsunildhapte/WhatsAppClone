@@ -1,29 +1,31 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <div class="header">
-        <div>
+      <div class="header" [style.display]="showInput ? 'none' : 'flex'">
+        <div class="logo">
           <span>WhatsApp</span>
         </div>
         <div class="navgation">
-          <input matInput placeholder="Search" style="display: none" />
-          <button>
+          <button (click)="startCamera()">
             <mat-icon>camera_alt</mat-icon>
           </button>
-          <button>
+          <button (click)="showInput = true">
             <mat-icon>search</mat-icon>
           </button>
-          <button>
+          <button [matMenuTriggerFor]="menu">
             <mat-icon>more_vert</mat-icon>
           </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Help</button>
+          </mat-menu>
         </div>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <div class="nav">
-        <mat-tab-group class="custom-primary">
+      <div class="nav" [style.display]="showInput ? 'none' : 'block'">
+        <mat-tab-group>
           <mat-tab>
             <ng-template mat-tab-label>
               <mat-icon>group</mat-icon>
@@ -36,6 +38,19 @@
             <mat-tab label="Calls"> Calls </mat-tab>
           </div>
         </mat-tab-group>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="search" [style.display]="showInput ? 'block' : 'none'">
+        <button [style.display]="showInput2 ? 'none' : 'block'">
+          <mat-icon>keyboard_backspace</mat-icon>
+        </button>
+        <input matInput placeholder="Search" />
+        <button>
+          <mat-icon>search</mat-icon>
+        </button>
       </div>
     </div>
   </div>

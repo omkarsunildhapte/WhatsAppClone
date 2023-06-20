@@ -1,0 +1,15 @@
+p {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "Roboto", Arial, sans-serif;
+}
+.action {
+  display: flex;
+  justify-content: end;
+}
+.action button {
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: 12px;
+}

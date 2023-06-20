@@ -37,3 +37,12 @@ $frontend-theme: mat.define-light-theme((
 .mat-mdc-tab-header {
   background: #008069;
 }
+.mat-tab-label {
+  background-color: #008069;
+  color: #fff;
+}
+.mat-mdc-tab:not(.mat-mdc-tab-disabled) .mdc-tab-indicator__content--underline {
+  border: none !important;
+  border-bottom: 4px solid #fff !important;
+}
+

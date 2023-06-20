@@ -1,0 +1,100 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  text-align: center;
+}
+.col {
+  width: 100%;
+}
+.header {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  background: #008069;
+  color: #fff;
+  padding: 10px;
+  width: 100vw;
+}
+button {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+mat-icon {
+  color: #fff;
+}
+.profile {
+  height: 54px;
+  width: 54px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  background: red;
+  margin: 0px 10px;
+  font-family: "Roboto", Arial, sans-serif;
+  justify-content: center;
+}
+.status {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Roboto", Arial, sans-serif;
+  margin-top: 10px;
+}
+.status span {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+}
+.status p {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+}
+.navgation {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.navgation button {
+  margin: 0px 10px;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.chats {
+  height: 60vh;
+  background: #e5e5e5;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  background: #e5e5e5;
+  justify-content: center;
+  align-items: center;
+}
+.footer input {
+  width: 87vw;
+  border-radius: 76px;
+  border: none;
+  padding: 10px;
+}
+.footer mat-icon {
+  color: #008069;
+}

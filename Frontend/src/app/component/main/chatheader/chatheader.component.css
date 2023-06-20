@@ -19,11 +19,7 @@
   align-items: center;
   justify-content: space-between;
   background: #008069;
-  padding: 10px;
-}
-.mat-tab-label {
-  background-color: #008069;
-  color: #fff;
+  padding: 14px;
 }
 .header span {
   font-weight: 700;
@@ -36,6 +32,10 @@
   align-items: center;
   justify-content: end;
 }
+.logo,
+.navgation {
+  padding: 10px 0px 0px 20px;
+}
 .navgation mat-icon {
   font-size: 20px;
   color: #fff;
@@ -44,4 +44,7 @@
 .header button {
   background: transparent;
   border: none;
+}
+.search {
+  padding: 12px 20px;
 }

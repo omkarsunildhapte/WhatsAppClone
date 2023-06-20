@@ -12,13 +12,20 @@ import { ChatheaderComponent } from './component/main/chatheader/chatheader.comp
 import { MatInputModule } from '@angular/material/input';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { ChatsComponent } from './component/main/chats/chats.component';
+import { ChatsComponent } from './component/features/chats/chats.component';
 import { WelcomeComponent } from './component/slider/welcome/welcome.component';
 import { TeamsServiceComponent } from './component/slider/teams-service/teams-service.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { HttpClientModule } from '@angular/common/http';
 import { NumericOnlyDirective } from './directive/numeric-only.directive';
 import { AddUnderscoreDirective } from './directive/add-underscore.directive';
+import { CamreaComponent } from './component/features/camrea/camrea.component';
+import { PhoneErrorComponent } from './component/dialog/phone-error/phone-error.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { environment } from 'src/environments/environment.development';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { ProfileComponent } from './component/features/profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,8 +37,12 @@ import { AddUnderscoreDirective } from './directive/add-underscore.directive';
     TeamsServiceComponent,
     NumericOnlyDirective,
     AddUnderscoreDirective,
+    CamreaComponent,
+    PhoneErrorComponent,
+    ProfileComponent,
   ],
   imports: [
+    MatDialogModule,
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
@@ -44,7 +55,9 @@ import { AddUnderscoreDirective } from './directive/add-underscore.directive';
     FormsModule,
     MatInputModule,
     MatToolbarModule,
-    MatTabsModule
+    MatTabsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
