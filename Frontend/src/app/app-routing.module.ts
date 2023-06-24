@@ -5,6 +5,7 @@ import { OtpComponent } from './component/auth/otp/otp.component';
 import { LoginComponent } from './component/auth/login/login.component';
 import { ChatheaderComponent } from './component/main/chatheader/chatheader.component';
 import { WelcomeComponent } from './component/slider/welcome/welcome.component';
+import { ChatsComponent } from './component/features/chats/chats.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'otp', component: OtpComponent },
   { path: 'chat', component: ChatheaderComponent },
+  { path: 'chats', component: ChatsComponent }
 ];
 
 @NgModule({

@@ -6,15 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./otp.component.css']
 })
 export class OtpComponent {
-  time!: number;
+  time: number = 0;
   interval: any;
+  constructor() { }
 
   ngOnInit() {
     this.startTimer();
   }
 
   startTimer() {
-    this.time = 60;
+    this.time = 59;
     this.interval = setInterval(() => {
       if (this.time > 0) {
         this.time--;
