@@ -27,6 +27,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { ProfileComponent } from './component/features/profile/profile.component';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { WebcamModule } from 'ngx-webcam';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,6 +61,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    WebcamModule
 
   ],
   providers: [],

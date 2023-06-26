@@ -19,7 +19,7 @@
             <button mat-menu-item>Help</button>
             <button mat-menu-item>New Group</button>
             <button mat-menu-item>Linked Devices</button>
-            <button mat-menu-item>Settings</button>
+            <button mat-menu-item routerLink="/profile">Settings</button>
           </mat-menu>
         </div>
       </div>
@@ -27,7 +27,7 @@
   </div>
   <div class="row">
     <div class="col">
-      <div class="nav" [style.display]="showInput ? 'none' : 'block'">
+      <div class="nav">
         <mat-tab-group>
           <mat-tab>
             <ng-template mat-tab-label>

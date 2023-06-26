@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.row {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  text-align: center;
+}
+.col {
+  width: 100%;
+}
+.header {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  background: #008069;
+  padding: 12px 15px;
+}
+.header button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.header button mat-icon {
+  font-size: 24px;
+  color: #fff;
+}
+.header span {
+  font-size: 24px;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 500;
+  margin: 10px;
+  color: #fff;
+}
+.profileimage {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.dp {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: red;
+  margin: 12px 20px;
+}
+.logo {
+  position: absolute;
+  left: 53%;
+  bottom: 4%;
+  border-radius: 50%;
+  padding: 7px;
+  background: #008069;
+}
+button {
+  background: transparent;
+  border: none;
+}
+.profileimage {
+  position: relative;
+}
+.user {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.username {
+  display: grid;
+  grid-auto-columns: min-content;
+  padding: 10px;
+}
+.username input {
+  border: none;
+  border-bottom: 2px solid #008069;
+  padding: 10px;
+}
+.username label {
+  margin-right: 65%;
+}
+.action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+}
+.action button {
+  background: #008069;
+  color: #fff;
+  padding: 12px 20px;
+}

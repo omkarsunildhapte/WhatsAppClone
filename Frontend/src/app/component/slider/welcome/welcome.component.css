@@ -16,8 +16,8 @@
   width: 100%;
 }
 img {
-  width: 144px;
-  height: 144px;
+  width: 42vw;
+  height: 24vh;
 }
 .logo {
   display: flex;

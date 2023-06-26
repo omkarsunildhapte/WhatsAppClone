@@ -1,1 +1,16 @@
-<video #video autoplay></video>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div>
+        <video #video></video>
+        <div class="bottom">
+          <button class="file-input-button" (click)="handleFileInput()">
+            Select File
+          </button>
+          <button class="btr" (click)="capture()"><div></div></button>
+          <button (click)="toggleCamera()">Toggle Camera</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; /* Center the video horizontally and vertically */
+  height: 100vh; /* Set container height to full viewport height */
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  text-align: center;
+}
+
+.col {
+  width: 100%;
+}
+
+video {
+  width: auto;
+  height: 100vh;
+  max-width: 100%;
+  object-fit: fill;
+  object-position: center;
+}
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 6%;
+}
+.btr {
+  padding: 32px;
+  border: none;
+  border-radius: 50%;
+}
+button {
+  margin: 0px 20px;
+}

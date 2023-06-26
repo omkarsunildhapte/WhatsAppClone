@@ -1,1 +1,76 @@
-<p>profile works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="header">
+        <button routerLink="/main">
+          <svg
+            width="30"
+            height="27"
+            viewBox="0 0 30 27"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M24.9997 11.9566H9.74966L16.7497 5.86964L14.9997 4.3479L4.99966 13.0436L14.9997 21.7392L16.7497 20.2175L9.74966 14.1305H24.9997V11.9566Z"
+              fill="white"
+            />
+          </svg>
+        </button>
+        <span>Profile</span>
+        <button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Help</button>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="profileimage">
+        <div class="dp"></div>
+        <div class="logo">
+          <button (click)="startCamera()">
+            <mat-icon>camera_alt</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="user">
+        <div></div>
+        <div class="username">
+          <div>
+            <label for="username">Name</label>
+            <input type="text" name="" id="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="user">
+        <div></div>
+        <div class="username">
+          <div>
+            <label for="username">Name</label>
+            <input type="text" name="" id="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="action">
+        <button type="button" routerLink="/main">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

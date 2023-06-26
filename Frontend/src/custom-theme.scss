@@ -45,4 +45,6 @@ $frontend-theme: mat.define-light-theme((
   border: none !important;
   border-bottom: 4px solid #fff !important;
 }
-
+.mat-mdc-tab-header-pagination-controls-enabled .mat-mdc-tab-header-pagination{
+  display: none !important;
+}
